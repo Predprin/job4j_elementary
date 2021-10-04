@@ -24,7 +24,7 @@ public class SqAreaTest {
     }
 
     @Test
-    public void whenP12K2Then160() {
+    public void whenP12K2Then8() {
         double p = 12;
         double k = 2;
         double expected = 8;
