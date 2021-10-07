@@ -11,8 +11,12 @@ public class ChessBoard {
 
     public static int way(int x1, int y1, int x2, int y2) {
         int rsl = 0;
-        if (Math.abs(x2 - x1) == Math.abs(y2 - y1) && isPositive(x1, y1, x2, y2) && lessSeven(x1, y1, x2, y2)) {
-            rsl = Math.abs(x2 - x1);
+        if (isPositive(x1, y1, x2, y2) && lessSeven(x1, y1, x2, y2)) {
+            if (Math.abs(x2 - x1) == Math.abs(y2 - y1)) {
+                rsl = Math.abs(x2 - x1);
+        } else {
+            return 0;
+            }
         }
         return rsl;
     }
@@ -20,7 +24,7 @@ public class ChessBoard {
     public static void main(String[] args) {
         System.out.println(way(7, 0, 0, 7));
         System.out.println(way(8, 4, 2, 3));
-        System.out.println(way(5, -1, 3, 7));
+        System.out.println(way(2, -1, 4, 1));
         System.out.println(way(2, 6, 4, 4));
     }
 }
